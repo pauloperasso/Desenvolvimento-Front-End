@@ -1,22 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página com libras</title>
+    <title>Utilizando CSS</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <style>
+        /*Todo parágrafo que seja da classe promoção e descendente de um elemento com id=principal*/
+
+        article p {
+            padding: 12px;
+            background-color: lightgray;
+
+
+        }
+
+        #principal p.promocao {
+            padding: 12px;
+            background-color: lightpink;
+        }
+
+        /*Todo parágrafo da classe coordenadores, descendente de uma section, que é descendente de uma article, que é descendente de um elemento com id=principal, que é descendente do body obviamente*/
+
+        body #principal article section p.coordenadores {
+            text-align: center;
+        }
+
+        /*Todo parágrafo filho direto de article*/
+
+        article p {
+            border: 2px solid black;
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
-    <p>vamos testar o vlibras e o widget</p>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt accusantium voluptatum consequuntur fugit eveniet, doloribus quidem asperiores hic tenetur delectus sapiente. Harum, expedita ab nesciunt consequuntur vel rem neque asperiores!</p>
-    <div vw class ="enabled">
-        <div vw-access-button class ="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div> 
-    </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app')
-    </script>
+    <main id="principal">
+        <h1 class="titulo">Portal de Cursos</h1>
+        <p id="Descricao">Temos cursos de diversas áreas.</p>
+        <p class="promocao">Venha conversar conosco e conhecer nossas ofertas de <strong>Bolsas de estudo</strong>.</p>
+
+
+        <p class="final-pagina">Entre em contato: 99 88 76543-2100</p>
+
+        <article>
+            <p>Cursos</p>
+            <p class="ADS">Análise e Desenvolvimento de Sistemas</p>
+            <p class="CIC">Ciência da computação</p>
+            <p class="CDI">Ciência de Dados</p>
+            <section>
+                <p class="coordenadores">Saiba quem são os coordenadores de cada curso</p>
+            </section>
+        </article>
+    </main>
 </body>
+<footer>
+    <p id="rodape" class="final-pagina">&copy 2025 | Todos os direitos reservados</p>
+</footer>
+
 </html>

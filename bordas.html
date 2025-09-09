@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento com Bordas</title>
+    <style>
+        a {
+            /* border-style: solid;
+            border-color: blue;
+            border-width: thin; */
+            border: thin solid red;
+        }
+
+        .Ciencia {
+            border-bottom: 5px dashed green;
+        }
+
+        .Engenharia {
+            border: 2px solid blue;
+            /* border-radius: 50px;
+            border-top-left-radius: 75px; */
+            border-radius: 20px 30px 40px 50px;
+            background-color: bisque;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="cursos">
+            <p class="Engenharia">Engenharia de Computação</p>
+            <p class="Ciencia">Ciência da Computação</p>
+            <a href="#">Mais informações</a>
+        </div>
+    </main>
+</body>
+</html>
